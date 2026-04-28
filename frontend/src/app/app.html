@@ -1,0 +1,92 @@
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2;
+    /* Azul padrão Angular */
+    color: white;
+    padding: 0 20px;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 75px; 
+    width: auto;
+    margin-right: 12px;
+  }
+
+  .logo h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    font-family: sans-serif;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #666;
+    font-size: 0.9rem;
+  }
+</style>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="../logo.png">
+    <h1>Projeto Angular</h1>
+  </div>
+  <nav class="nav-links">
+    <a routerLink="/">Home</a>
+    <a routerLink="/contato">Contato</a>
+    <a routerLink="/suporte">Suporte Técnico</a>
+    <a routerLink="/cadastro">Cadastrar Aluno</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  @if (title() === 'projeto19') {
+  <section>
+    <h1>🚀 Bem-vindo ao Framework Angular</h1>
+    <p>Este projeto demonstra o uso de <strong>Rotas</strong> e <strong>Componentes Standalone</strong> na versão 21.
+    </p>
+    <div style="background: #e3f2fd; padding: 15px; border-left: 5px solid #2196f3;">
+      Dica: Clique no menu acima para testar a navegação sem recarregar a página!
+    </div>
+  </section>
+  }
+
+  <router-outlet></router-outlet>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 - Sistemas de Informação</p>
+  <p></p>
+</footer>
